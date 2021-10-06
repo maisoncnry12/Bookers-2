@@ -14,6 +14,13 @@
       <main>
         <p id="notice"><%= notice %></p>
       </main>
+       <!--検索窓の部分テンプレート-->
+    <div class="search-box">
+      <% if user_signed_in? %>
+        <%= render 'searchs/search', model: @model, content: @content, method: @method %>
+      <% end %>
+    </div>
+    
      <%= yield %>
     <%= render 'layouts/footer' %>
   </body>
