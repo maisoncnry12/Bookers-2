@@ -1,0 +1,4 @@
+<%= form_with(model:[book, book_comment]) do |f| %> 
+  <%= f.text_area :comment , :size => "50:50" , class: "textbox", placeholder: "コメントをここに" %>
+    <p><%= f.submit "送信" %></p>
+<% end %>
